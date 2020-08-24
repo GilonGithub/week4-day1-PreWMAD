@@ -1,7 +1,7 @@
 const addLargestNumbers = function(data) {
   
   let sum = 0;
-  let arrLargestNumbers = [];
+  let arrLargestNumbers = []; //just for the sole purpose of printing the largest numbers. Can be removed.
 
 //function to pick the largest from the array
 
@@ -21,7 +21,7 @@ const addLargestNumbers = function(data) {
 
       data.splice(data.indexOf(temp), 1);
       
-      arrLargestNumbers.push(temp);
+      arrLargestNumbers.push(temp); //just for the sole purpose of printing the largest numbers. Can be removed.
 
       return temp;
 
@@ -36,7 +36,9 @@ const addLargestNumbers = function(data) {
    }
 
   console.log(arrLargestNumbers);
-     return sum;
+    
+  return sum;
+  
 };
 
 //console.log(addLargestNumbers([1, 10]));
