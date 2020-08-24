@@ -3,29 +3,32 @@ const addLargestNumbers = function(data) {
   let sum = 0;
   let arrLargestNumbers = [];
 
-  const pickLargest = function (data) {
-    
-    let temp = 0;
+//function to pick the largest from the array
 
-    data.forEach(function(elem) {
-
-      if (temp < elem) {
-       
-        temp = elem;
+    const pickLargest = function (data) {
       
-      }
+      let temp = 0;
 
-    });
+      data.forEach(function(elem) {
 
-    data.splice(data.indexOf(temp), 1);
-    
-    arrLargestNumbers.push(temp);
+        if (temp < elem) {
+        
+          temp = elem;
+        
+        }
 
-    return temp;
+      });
 
-  }
+      data.splice(data.indexOf(temp), 1);
+      
+      arrLargestNumbers.push(temp);
 
-    
+      return temp;
+
+    }
+
+//loop the pickLargest function twice to add the two largest numbers
+
   for (let j = 0; j < 2; j++)
    {
      sum += pickLargest(data);
